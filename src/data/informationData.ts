@@ -1,5 +1,6 @@
 import { FaWhatsapp } from "react-icons/fa";
 import { Facebook } from "lucide-react";
+import youtube from '../animation/youtube.json'
 
 export const social = [
     {
@@ -27,4 +28,23 @@ export const navMenu = [
         name: "Contact",
         url: "/contact"
     }
+]
+
+export const workMenu = [
+    {
+        name: 'Youtube SEO',
+        animation: youtube
+    },
+    {
+        name: 'Youtube SEO',
+        animation: youtube
+    },
+    {
+        name: 'Youtube SEO',
+        animation: youtube
+    },
+    {
+        name: 'Youtube SEO',
+        animation: youtube
+    },
 ]

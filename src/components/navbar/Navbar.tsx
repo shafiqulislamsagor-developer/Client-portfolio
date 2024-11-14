@@ -7,7 +7,7 @@ import { navMenu, social } from "@/data/informationData";
 
 export default function Navbar() {
   return (
-    <div className="text-white py-2 bg-[#0077FF]">
+    <div className="text-white py-2 bg-primary-2">
       <nav className="flex items-center w-[95%] mx-auto justify-between">
         <Link href={"/"} className="flex items-center gap-3">
           <Image

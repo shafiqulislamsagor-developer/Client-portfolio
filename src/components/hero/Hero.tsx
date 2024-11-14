@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <div className="flex items-center py-20 justify-between">
+    <div className="flex  w-[95%] mx-auto items-center py-20 justify-between">
       <div className="w-1/2 space-y-5">
         <h1 className="text-6xl leading-tight font-bold">
           Welcome to My <br />{" "}
