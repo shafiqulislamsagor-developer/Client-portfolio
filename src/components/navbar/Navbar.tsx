@@ -1,13 +1,24 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Facebook } from "lucide-react";
-import { FaWhatsapp } from "react-icons/fa";
 import { navMenu, social } from "@/data/informationData";
 
 export default function Navbar() {
+  // const [scrollY, setScrollY] = useState(0);
+
+  // useEffect(() => {
+  //   const handleScroll = () => setScrollY(window.scrollY);
+  //   window.addEventListener("scroll", handleScroll);
+
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
+
+  // const navbarBg = scrollY > 1 ? "sticky top-0 shadow-xl" : "";
+
   return (
-    <div className="text-white py-2 bg-primary-2">
+    <div className={`text-white py-2 sticky shadow-lg z-50 bg-primary-2 top-0`}>
       <nav className="flex items-center w-[95%] mx-auto justify-between">
         <Link href={"/"} className="flex items-center gap-3">
           <Image

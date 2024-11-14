@@ -2,7 +2,6 @@
 
 import Lottie from "lottie-react";
 import React from "react";
-import youtube from "../../animation/youtube.json";
 import { workMenu } from "@/data/informationData";
 
 export default function Work() {
