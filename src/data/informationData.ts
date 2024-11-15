@@ -72,3 +72,22 @@ export const CommitmentData = [
         icon: BsCalendar2Date
     },
 ]
+
+export const SkillsData = [
+    {
+        title: 'Youtube SEO',
+        value: 90,
+    },
+    {
+        title: 'Youtube SEO',
+        value: 50,
+    },
+    {
+        title: 'Youtube SEO',
+        value: 60,
+    },
+    {
+        title: 'Youtube SEO',
+        value: 10,
+    },
+]
