@@ -1,3 +1,4 @@
+import { InformationData } from "@/data/informationData";
 import Image from "next/image";
 import React from "react";
 
@@ -9,7 +10,7 @@ export default function Intro() {
     >
       <div className="w-2/5">
         <Image
-          src="https://fakeimg.pl/250x100/"
+          src={InformationData.image}
           alt="logo"
           width={50}
           height={50}
@@ -21,23 +22,14 @@ export default function Intro() {
           Hello, I’m <br />
           <span className="font-bold text-4xl text-slate-900">
             {" "}
-            Mizanur Rahman
+            {InformationData.name}
           </span>
         </h1>
         <h3 className="text-xl mt-3 mb-1 font-medium">
-          Social Media Marketer from{" "}
-          <span className="text-primary-2">Bangladesh</span>
+          {InformationData.jobTitle} from{" "}
+          <span className="text-primary-2">{InformationData.country}</span>
         </h3>
-        <p className="text-slate-700">
-          For the past 5 years I have been working on YouTube video SEO,
-          optimization, keyword research, YouTube channel creation, setup, all
-          social media creation and setup, logo and banner design. I work
-          according to customer needs. I have completed extensive training on
-          Total Digital Marketing from Outsourcing Institute and participated in
-          many practical projects. I can work for a big organization with full
-          responsibility. I am very hardworking. So my work style is different
-          from everyone else.
-        </p>
+        <p className="text-slate-700">{InformationData.description}</p>
       </div>
     </div>
   );

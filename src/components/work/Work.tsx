@@ -11,7 +11,7 @@ export default function Work() {
         {workMenu.map((work, id) => (
           <div
             key={id}
-            className="bg-white border-b-8 shadow-xl  hover:scale-105 duration-300 min-h-72  rounded-sm px-4 gap-5 border-primary-2 cursor-wait flex flex-col items-center justify-center"
+            className="bg-white border-b-8 shadow-xl  hover:scale-105 duration-300 min-h-72  rounded-sm px-4 gap-5 border-primary-2 cursor-help flex flex-col items-center justify-center"
           >
             <div className=" space-y-2">
               <Lottie

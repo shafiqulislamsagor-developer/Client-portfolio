@@ -1,6 +1,9 @@
+"use client";
 import React from "react";
 import { Button } from "../ui/button";
-import Image from "next/image";
+import working from "../../animation/working.json";
+import Lottie from "lottie-react";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -8,23 +11,29 @@ export default function Hero() {
       <div className="w-1/2 space-y-5">
         <h1 className="text-6xl leading-tight font-bold">
           Welcome to My <br />{" "}
-          <span className="text-primary">Digital Marketing</span> <br /> Service
+          <span className="text-primary-2">Digital Marketing</span> <br />{" "}
+          Service
         </h1>
         <p className="w-3/4 text-lg text-slate-600">
           Creating an innovative, functional, and lean business strategy for
           your success.
         </p>
-        <div>
-          <Button>Hire Me</Button>
+        <div className="flex items-center gap-3">
+          <Link href="#contact">
+            <Button className="bg-primary-2 hover:scale-105 hover:bg-primary-2 w-full md:w-auto duration-500 transition-all px-5 h-[40px]">
+              Contact Me
+            </Button>
+          </Link>
+          <Button className="bg-primary-2 hover:scale-105 hover:bg-primary-2 w-full md:w-auto duration-500 transition-all px-5 h-[40px]">
+            Resume Download
+          </Button>
         </div>
       </div>
       <div className="w-1/2 flex items-center justify-end pr-7">
-        <Image
-          src="https://fakeimg.pl/250x100/"
-          alt="logo"
-          width={50}
-          height={50}
-          className="w-[400px] rounded-lg h-[400px]"
+        <Lottie
+          className="w-full rounded-lg h-[400px]"
+          animationData={working}
+          loop={true}
         />
       </div>
     </div>

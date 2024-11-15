@@ -81,6 +81,14 @@ export const CommitmentData = [
     },
 ]
 
+export const InformationData = {
+    name: 'Mizanur Rahman',
+    description: 'For the past 5 years I have been working on YouTube video SEO, optimization, keyword research, YouTube channel creation, setup, all social media creation and setup, logo and banner design. I work according to customer needs. I have completed extensive training on Total Digital Marketing from Outsourcing Institute and participated in many practical projects. I can work for a big organization with full responsibility. I am very hardworking. So my work style is different from everyone else.',
+    image: 'https://fakeimg.pl/250x100/',
+    jobTitle: 'Social Media Marketer',
+    country: 'Bangladesh'
+}
+
 export const SkillsData = [
     {
         title: 'Youtube SEO',
@@ -99,3 +107,35 @@ export const SkillsData = [
         value: 10,
     },
 ]
+
+export const FooterData = {
+    description: 'We are one of the prominent travel agencies, having arranged over 1500 trips successfully. Our personalized tours ensure the best experiences. Join us to make your vacation unforgettable.',
+    helpLink: [
+        {
+            title: 'Up Work',
+            url: '#'
+        },
+        {
+            title: 'Fivver',
+            url: '#'
+        },
+    ],
+    Services: [
+        {
+            title: 'Development',
+            url: '#'
+        },
+        {
+            title: 'Development',
+            url: '#'
+        },
+        {
+            title: 'Development',
+            url: '#'
+        },
+    ],
+    Address: [{
+        url: '', title: 'abasdfasddfgsdfgasdffac@gmail.com'
+    }, { url: '', title: '+1234567890' }, { url: '', title: '123 Main St, City, State, 12345 ' }]
+
+}
