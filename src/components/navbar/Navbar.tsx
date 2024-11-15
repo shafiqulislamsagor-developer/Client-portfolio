@@ -33,7 +33,13 @@ export default function Navbar() {
         <ul className="flex items-center gap-8">
           {navMenu.map((menu, id) => (
             <li key={id}>
-              <Link href={menu.url}> {menu.name}</Link>
+              <Link
+                className="border-b-2 border-transparent rounded-[2px] transition-all duration-300 hover:border-white pb-1"
+                href={menu.url}
+              >
+                {" "}
+                {menu.name}
+              </Link>
             </li>
           ))}
         </ul>

@@ -1,4 +1,5 @@
 import Commitment from "@/components/commitment/Commitment";
+import Contact from "@/components/contact/Contact";
 import Footer from "@/components/footer/Footer";
 import Hero from "@/components/hero/Hero";
 import Intro from "@/components/intro/Intro";
@@ -15,7 +16,7 @@ export default function Home() {
       <Commitment />
       <Skill />
       <Project />
-      <Footer />
+      <Contact />
     </main>
   );
 }
