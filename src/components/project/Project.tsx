@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { Modal } from "../Modal/Modal";
+import { ProjectData } from "@/data/informationData";
 
 export default function Project() {
   return (
@@ -11,7 +12,14 @@ export default function Project() {
         </span>
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-        <Modal />
+        {ProjectData.map((project, id) => (
+          <Modal
+            key={id}
+            img={project.image}
+            title={project.title}
+            url={project.url}
+          />
+        ))}
       </div>
     </div>
   );

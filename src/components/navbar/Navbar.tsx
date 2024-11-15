@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { InformationData, navMenu, social } from "@/data/informationData";
+import logo from "/public/logo.png";
 
 export default function Navbar() {
   // const [scrollY, setScrollY] = useState(0);
@@ -22,11 +23,11 @@ export default function Navbar() {
       <nav className="flex items-center w-[95%] mx-auto justify-between">
         <Link href={"/"} className="flex items-center gap-3">
           <Image
-            src="https://fakeimg.pl/250x100/"
+            src={logo}
             alt="logo"
             width={50}
             height={50}
-            className="w-10 h-10"
+            className="w-10 h-10 rounded-lg"
           />
           <h1 className="text-2xl font-bold">{InformationData.Logo}</h1>
         </Link>

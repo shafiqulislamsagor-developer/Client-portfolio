@@ -1,6 +1,7 @@
 import { InformationData } from "@/data/informationData";
 import Image from "next/image";
 import React from "react";
+import img from "/public/mizan.jpg";
 
 export default function Intro() {
   return (
@@ -9,13 +10,18 @@ export default function Intro() {
       className="w-[95%] mx-auto py-20  gap-10 flex items-center justify-between"
     >
       <div className="w-2/5">
-        <Image
+        <img
+          src={InformationData.image}
+          alt=""
+          className="w-[90%] rounded-lg"
+        />
+        {/* <Image
           src={InformationData.image}
           alt="logo"
           width={50}
           height={50}
-          className="w-[90%] rounded-lg h-[400px]"
-        />
+          className="w-[90%] rounded-lg"
+        /> */}
       </div>
       <div className="w-3/5">
         <h1 className="text-3xl text-primary-2 leading-snug">

@@ -12,37 +12,48 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 
-export function Modal() {
+export function Modal({
+  img,
+  title,
+  url,
+}: {
+  img: string;
+  title: string;
+  url: string;
+}) {
   return (
     <Dialog>
       <DialogTrigger asChild>
         <div className="cursor-pointer h-[220px] rounded-lg overflow-hidden group">
-          <Image
-            src="https://fakeimg.pl/250x100/"
+          <img src={img} alt="" className="w-full rounded-lg h-[220px]" />
+          {/* <Image
+            src={img}
             alt="logo"
             width={50}
             height={50}
             className="w-full rounded-lg h-[220px]"
-          />
+          /> */}
           <div className="w-ful group-hover:-translate-y-full transition-all duration-500 rounded-lg h-[220px] bg-primary-2/30 flex flex-col justify-center items-center">
-            <h1 className="text-2xl font-semibold text-slate-800">
+            <h1 className="text-xl w-full text-center font-semibold bg-primary-2 text-white ">
               {" "}
-              Youtube SEO{" "}
+              {title}{" "}
             </h1>
           </div>
         </div>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[700px]">
         <DialogHeader>
-          <DialogTitle>Project Details</DialogTitle>
-          <DialogDescription>
+          <DialogTitle>Project Details :- {title}</DialogTitle>
+          {/* <DialogDescription>
             Make changes to your profile here. Click save when you&lsquo;re
             done.
-          </DialogDescription>
+          </DialogDescription> */}
         </DialogHeader>
-        <div></div>
+        <div>
+          <img src={img} className="w-full" alt="" />
+        </div>
         <DialogFooter>
-          <Link href={"https://www.facebook.com/"}>
+          <Link href={url}>
             <Button className="bg-primary-2 hover:scale-105 hover:bg-primary-2 duration-500 transition-all">
               <DialogClose className="bg-transparent">Visit Now</DialogClose>
             </Button>

@@ -13,14 +13,16 @@ export default function Work() {
             key={id}
             className="bg-white border-b-8 shadow-xl  hover:scale-105 duration-300 min-h-72  rounded-sm px-4 gap-5 border-primary-2 cursor-help flex flex-col items-center justify-center"
           >
-            <div className=" space-y-2">
+            <div className="flex flex-col justify-between space-y-2">
               <Lottie
-                className="w-40 mx-auto"
+                className={` mx-auto ${
+                  work.name !== "Optimization" ? "w-32 h-40" : "w-40 h-40"
+                }`}
                 animationData={work.animation}
                 loop={true}
               />
-              <h1 className="text-4xl font-semibold">{work.name}</h1>
             </div>
+            <h1 className="text-4xl font-semibold">{work.name}</h1>
           </div>
         ))}
       </div>
