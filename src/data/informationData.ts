@@ -23,12 +23,20 @@ export const navMenu = [
     },
     {
         name: "About",
-        url: "/about"
+        url: "#about"
+    },
+    {
+        name: "Skills",
+        url: "#skill"
+    },
+    {
+        name: "Projects",
+        url: "#project"
     },
     {
         name: "Contact",
-        url: "/contact"
-    }
+        url: "#contact"
+    },
 ]
 
 export const workMenu = [

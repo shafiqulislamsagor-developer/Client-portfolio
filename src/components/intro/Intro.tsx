@@ -3,7 +3,10 @@ import React from "react";
 
 export default function Intro() {
   return (
-    <div className="w-[95%] mx-auto my-20  gap-10 flex items-center justify-between">
+    <div
+      id="about"
+      className="w-[95%] mx-auto py-20  gap-10 flex items-center justify-between"
+    >
       <div className="w-2/5">
         <Image
           src="https://fakeimg.pl/250x100/"
