@@ -28,10 +28,10 @@ export default function Contact() {
   const sendEmail = async () => {
     try {
       const res = await emailjs.send(
-        "service_sxevxkb",
-        "template_ootozbo",
+        "service_ubl5cxn",
+        "template_85ll6rg",
         formData,
-        "ouVU9SQ060dTMnTDi"
+        "g1iULjyitIkqq1ffS"
       );
 
       if (res.status === 200) {
