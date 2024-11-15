@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { navMenu, social } from "@/data/informationData";
+import { InformationData, navMenu, social } from "@/data/informationData";
 
 export default function Navbar() {
   // const [scrollY, setScrollY] = useState(0);
@@ -28,7 +28,7 @@ export default function Navbar() {
             height={50}
             className="w-10 h-10"
           />
-          <h1 className="text-2xl font-bold">Freelancer Mizan</h1>
+          <h1 className="text-2xl font-bold">{InformationData.Logo}</h1>
         </Link>
         <ul className="flex items-center gap-8">
           {navMenu.map((menu, id) => (

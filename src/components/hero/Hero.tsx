@@ -24,7 +24,15 @@ export default function Hero() {
               Contact Me
             </Button>
           </Link>
-          <Button className="bg-primary-2 hover:scale-105 hover:bg-primary-2 w-full md:w-auto duration-500 transition-all px-5 h-[40px]">
+          <Button
+            onClick={() => {
+              const link = document.createElement("a");
+              link.href =
+                "https://drive.google.com/uc?export=download&id=1JWLAzZB-EnitOjno31_rDx0eUxy9DPca";
+              link.click();
+            }}
+            className="bg-primary-2 hover:scale-105 hover:bg-primary-2 w-full md:w-auto duration-500 transition-all px-5 h-[40px]"
+          >
             Resume Download
           </Button>
         </div>

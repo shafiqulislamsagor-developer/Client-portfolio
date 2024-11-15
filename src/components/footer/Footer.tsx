@@ -1,5 +1,6 @@
 import { FooterData, navMenu } from "@/data/informationData";
 import Link from "next/link";
+import { AiOutlineMail } from "react-icons/ai";
 
 function Footer() {
   return (
@@ -29,7 +30,7 @@ function Footer() {
         </div>
 
         {/* Services Section */}
-        <div className="col-span-2 m-4">
+        <div className="col-span-2 -ml-5 my-4">
           <h3 className="text-lg font-semibold mb-2">Our Services</h3>
           <ul className="space-y-2">
             {FooterData.Services.map((nav, id) => (
@@ -46,11 +47,12 @@ function Footer() {
         </div>
 
         {/* Legal Section */}
-        <div className="col-span-2 -ml-5 my-4">
+        <div className="col-span-2 -ml-8 my-4">
           <h3 className="text-lg font-semibold mb-2">Address</h3>
           <ul className="space-y-2">
             {FooterData.Address.map((nav, id) => (
-              <li key={id}>
+              <li className="flex items-center gap-2" key={id}>
+                <nav.icon className="w-5 h-5" />
                 <Link
                   href={nav.url}
                   className="text-white text-wrap border-b-2 transition-all duration-300 pb-1 border-transparent hover:border-white"

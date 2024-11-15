@@ -2,6 +2,10 @@ import { FaWhatsapp } from "react-icons/fa";
 import { Facebook } from "lucide-react";
 import youtube from '../animation/youtube.json'
 import { BsCalendar2Date } from "react-icons/bs";
+import { AiOutlineMail } from "react-icons/ai";
+import { CiLocationOn } from "react-icons/ci";
+import { MdOutlinePhone } from "react-icons/md";
+
 
 export const social = [
     {
@@ -86,7 +90,8 @@ export const InformationData = {
     description: 'For the past 5 years I have been working on YouTube video SEO, optimization, keyword research, YouTube channel creation, setup, all social media creation and setup, logo and banner design. I work according to customer needs. I have completed extensive training on Total Digital Marketing from Outsourcing Institute and participated in many practical projects. I can work for a big organization with full responsibility. I am very hardworking. So my work style is different from everyone else.',
     image: 'https://fakeimg.pl/250x100/',
     jobTitle: 'Social Media Marketer',
-    country: 'Bangladesh'
+    country: 'Bangladesh',
+    Logo: 'Freelancer Mizan'
 }
 
 export const SkillsData = [
@@ -135,7 +140,7 @@ export const FooterData = {
         },
     ],
     Address: [{
-        url: '', title: 'abasdfasddfgsdfgasdffac@gmail.com'
-    }, { url: '', title: '+1234567890' }, { url: '', title: '123 Main St, City, State, 12345 ' }]
+        url: '', icon: AiOutlineMail, title: 'abasdfasddfgsdfgasdffac@gmail.com'
+    }, { url: '', icon: MdOutlinePhone, title: '+1234567890' }, { url: '', icon: CiLocationOn, title: '123 Main St, City, State, 12345 ' }]
 
 }
