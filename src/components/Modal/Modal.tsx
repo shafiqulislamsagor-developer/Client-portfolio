@@ -25,7 +25,7 @@ export function Modal({
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <div className="cursor-pointer h-[220px] rounded-lg border-2 border-primary-2 overflow-hidden group">
+        <div className="cursor-pointer h-[120px] lg:h-[220px] rounded-lg border-2 border-primary-2 overflow-hidden group">
           <img src={img} alt="" className="w-full rounded-lg h-[220px]" />
           {/* <Image
             src={img}
@@ -42,9 +42,11 @@ export function Modal({
           </div>
         </div>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[700px]">
+      <DialogContent className="w-[95%] mx-auto sm:max-w-[700px]">
         <DialogHeader>
-          <DialogTitle>Project Details :- {title}</DialogTitle>
+          <DialogTitle className="text-sm lg:text-xl">
+            Project Details :- {title}
+          </DialogTitle>
           {/* <DialogDescription>
             Make changes to your profile here. Click save when you&lsquo;re
             done.

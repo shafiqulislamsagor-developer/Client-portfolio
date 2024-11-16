@@ -59,19 +59,22 @@ export default function Contact() {
   console.log(loading);
 
   return (
-    <div id="contact" className="w-[95%] mx-auto text-slate-900">
-      <div className="flex flex-col justify-between items-center rounded-md py-4 md:flex-row md:py-10  lg:py-20">
+    <div
+      id="contact"
+      className=" bg-primary-1 border-t border-blue-300 text-slate-900"
+    >
+      <div className="flex flex-col-reverse w-[95%] mx-auto justify-between items-center rounded-md py-4 md:flex-row md:py-10  lg:py-20">
         {/* Form Section */}
-        <div className="w-full rounded-xl bg-white p-6 shadow-md md:w-[45%] mx-auto md:p-8">
+        <div className="w-full mb-7 rounded-xl bg-white p-6 shadow-md md:w-[45%] mx-auto md:p-8">
           <h2 className="mb-6 text-2xl font-bold md:text-3xl">Contact Me !</h2>
           <form onSubmit={buttonHandler}>
-            <div className="mb-4 grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div className="mb-4 grid text-sm lg:text-base grid-cols-1 gap-4 md:grid-cols-2">
               <input
                 type="text"
                 required
                 name="name"
                 placeholder="Name*"
-                className="col-span-1 rounded-md border p-3 focus:outline-none md:col-span-2"
+                className="rounded-md col-span-2 border p-3 focus:outline-none"
                 value={formData.name}
                 onChange={handleChange}
               />
@@ -112,7 +115,7 @@ export default function Contact() {
                   setFormData({ ...formData, agree: !formData.agree })
                 }
               />
-              <label>
+              <label className="text-sm lg:text-base">
                 I agree that my personal information will be processed and
                 stored.
               </label>
@@ -127,8 +130,12 @@ export default function Contact() {
         </div>
 
         {/* Contact Info Section */}
-        <div className="mt-8 flex w-full flex-col items-center justify-start space-y-8 md:mt-0 md:w-1/2">
-          <Lottie animationData={contactAnimation} loop={true} />
+        <div className="mt-8 flex w-full mx-auto flex-col items-center pb-10 justify-start space-y-8 md:mt-0 md:w-1/2">
+          <Lottie
+            animationData={contactAnimation}
+            className="mx-auto"
+            loop={true}
+          />
         </div>
       </div>
     </div>

@@ -4,8 +4,8 @@ import { SkillsData } from "@/data/informationData";
 
 export default function Skill() {
   return (
-    <div id="skill" className="py-16 w-[95%] mx-auto">
-      <h2 className="text-4xl font-bold mb-16 text-center">
+    <div id="skill" className="py-16 w-[85%] lg:w-[95%] mx-auto">
+      <h2 className="text-3xl lg:text-4xl font-bold mb-16 text-center">
         <span className="border-b-2 border-primary-2 pb-2 px-8 uppercase">
           skills
         </span>

@@ -7,13 +7,13 @@ export default function Intro() {
   return (
     <div
       id="about"
-      className="w-[95%] mx-auto py-20  gap-10 flex items-center justify-between"
+      className="w-[95%] mx-auto py-20  gap-10 flex flex-col lg:flex-row items-center justify-between"
     >
-      <div className="w-2/5">
+      <div className="w-full lg:w-2/5">
         <img
           src={InformationData.image}
           alt=""
-          className="w-[90%] rounded-lg"
+          className="w-[90%] mx-auto rounded-lg"
         />
         {/* <Image
           src={InformationData.image}
@@ -23,19 +23,21 @@ export default function Intro() {
           className="w-[90%] rounded-lg"
         /> */}
       </div>
-      <div className="w-3/5">
-        <h1 className="text-3xl text-primary-2 leading-snug">
+      <div className="w-[95%] mx-auto lg:w-3/5">
+        <h1 className="text-xl lg:text-3xl text-primary-2 leading-snug">
           Hello, I’m <br />
-          <span className="font-bold text-4xl text-slate-900">
+          <span className="font-bold text-2xl lg:text-4xl text-slate-900">
             {" "}
             {InformationData.name}
           </span>
         </h1>
-        <h3 className="text-xl mt-3 mb-1 font-medium">
+        <h3 className="text-base lg:text-xl mt-3 mb-1 font-medium">
           {InformationData.jobTitle} from{" "}
           <span className="text-primary-2">{InformationData.country}</span>
         </h3>
-        <p className="text-slate-700">{InformationData.description}</p>
+        <p className="text-sm lg:text-base text-slate-700">
+          {InformationData.description}
+        </p>
       </div>
     </div>
   );

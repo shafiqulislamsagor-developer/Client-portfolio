@@ -19,7 +19,9 @@ export default function Navbar() {
   // const navbarBg = scrollY > 1 ? "sticky top-0 shadow-xl" : "";
 
   return (
-    <div className={`text-white py-2 sticky shadow-lg z-50 bg-primary-2 top-0`}>
+    <div
+      className={`text-white py-2 sticky hidden lg:block shadow-lg z-50 bg-primary-2 top-0`}
+    >
       <nav className="flex items-center w-[95%] mx-auto justify-between">
         <Link href={"/"} className="flex items-center gap-3">
           <Image
