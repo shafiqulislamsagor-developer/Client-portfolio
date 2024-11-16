@@ -1,5 +1,7 @@
+"use client";
 import { CommitmentData } from "@/data/informationData";
 import React from "react";
+import { Count, Experiences, Review } from "./Count";
 
 export default function Commitment() {
   return (
@@ -14,7 +16,13 @@ export default function Commitment() {
               <commitment.icon className="w-10 h-10" />
             </div>
             <h2 className="text-xl font-semibold text-primary-2 mt-4">
-              {commitment.value}
+              {commitment.title === "Experiences" ? (
+                <Experiences value={commitment.value} />
+              ) : commitment.title === "Reviews" ? (
+                <Review value={commitment.value} />
+              ) : (
+                <Count value={commitment.value} />
+              )}
             </h2>
             <h2 className="text-2xl font-bold">{commitment.title}</h2>
           </div>

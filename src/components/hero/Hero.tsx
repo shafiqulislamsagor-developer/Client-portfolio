@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <div className="flex flex-col lg:flex-row w-[95%] mx-auto items-center py-20 justify-between">
+    <div className="flex flex-col lg:flex-row w-[95%] mx-auto items-center py-10 lg:py-20 justify-between">
       <div className="lg:w-1/2 space-y-5">
         <h1 className="text-4xl text-center lg:text-left lg:text-6xl leading-tight font-bold">
           Welcome to My <br />{" "}

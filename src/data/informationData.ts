@@ -39,7 +39,7 @@ export const navMenu = [
     },
     {
         name: "About",
-        url: "#about"
+        url: "/#about"
     },
     {
         name: "Skills",
@@ -77,22 +77,22 @@ export const workMenu = [
 export const CommitmentData = [
     {
         title: 'Experiences',
-        value: '5+ years',
+        value: 5,
         icon: BsCalendar2Date
     },
     {
         title: 'Clients',
-        value: '100+',
+        value: 100,
         icon: RiTeamLine
     },
     {
         title: 'Projects',
-        value: '300+',
+        value: 300,
         icon: MdWorkHistory
     },
     {
         title: 'Reviews',
-        value: '5.0',
+        value: 5.0,
         icon: GiStarsStack
     },
 ]

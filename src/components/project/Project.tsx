@@ -5,7 +5,7 @@ import { ProjectData } from "@/data/informationData";
 
 export default function Project() {
   return (
-    <div id="project" className="py-20 w-[95%] mx-auto">
+    <div id="project" className="py-10 lg:py-20 w-[95%] mx-auto">
       <h2 className="text-3xl lg:text-4xl font-bold mb-16 text-center">
         <span className="border-b-2 border-primary-2 pb-2 px-8 uppercase">
           Projects

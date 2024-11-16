@@ -25,7 +25,7 @@ export function Modal({
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <div className="cursor-pointer h-[120px] lg:h-[220px] rounded-lg border-2 border-primary-2 overflow-hidden group">
+        <div className="cursor-pointer h-[120px] md:h-[220px] rounded-lg border-2 border-primary-2 overflow-hidden group">
           <img src={img} alt="" className="w-full rounded-lg h-[220px]" />
           {/* <Image
             src={img}

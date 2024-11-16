@@ -1,6 +1,5 @@
 import Commitment from "@/components/commitment/Commitment";
 import Contact from "@/components/contact/Contact";
-import Footer from "@/components/footer/Footer";
 import Hero from "@/components/hero/Hero";
 import Intro from "@/components/intro/Intro";
 import Project from "@/components/project/Project";

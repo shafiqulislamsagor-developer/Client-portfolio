@@ -22,7 +22,7 @@ export default function Work() {
                 loop={true}
               />
             </div>
-            <h1 className="text-lg lg:text-4xl font-semibold">{work.name}</h1>
+            <h1 className="text-lg lg:text-3xl font-semibold">{work.name}</h1>
           </div>
         ))}
       </div>

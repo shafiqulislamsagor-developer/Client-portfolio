@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Progress } from "../ui/progress";
+import CountUp from "react-countup";
 
 export default function CustomProgress({
   value,
@@ -22,7 +23,9 @@ export default function CustomProgress({
       <Progress value={progress} className="w-full bg-primary-1" />
       <div className="flex mt-2 text-sm lg:text-base items-center justify-between">
         <h1 className="font-medium ">{title}</h1>
-        <p className="font-semibold">{value}%</p>
+        <p className="font-semibold">
+          <CountUp end={!value ? 0 : value} />%
+        </p>
       </div>
     </div>
   );
