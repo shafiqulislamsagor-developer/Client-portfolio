@@ -5,23 +5,22 @@ import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 function Footer() {
   return (
     <footer className="bg-primary-2 text-white py-8">
-      <div className="grid grid-cols-2 lg:grid-cols-9 w-[90%] lg:w-[95%] mx-auto justify-around">
+      <div className="grid grid-cols-2 lg:grid-cols-11 w-[90%] lg:w-[95%] mx-auto justify-around">
         {/* About Section */}
-        <div className="col-span-2 lg:col-span-3 text-center lg:text-left my-4">
+        <div className="col-span-2 lg:col-span-2  text-left my-4">
           <h3 className="text-xl font-semibold mb-5">About Us</h3>
-          <p className="text-sm mb-4">{FooterData.description}</p>
+          <p className="text-xs mb-4">{FooterData.description}</p>
         </div>
-
-        {/* Helpful Links Section */}
-        <div className="lg:col-span-2 lg:ml-14  my-4">
-          <h3 className="text-xl font-semibold mb-5">Order Now</h3>
+        {/* Services Section */}
+        <div className="lg:col-span-3 lg:ml-16  my-4">
+          <h3 className="text-xl font-semibold mb-5">Our Services</h3>
           <ul className="space-y-3">
-            {FooterData.helpLink.map((nav, id) => (
+            {FooterData.Services.map((nav, id) => (
               <li key={id} className="flex items-center gap-1">
                 <IoIosCheckmarkCircleOutline className="mb-1" />
                 <Link
                   href={nav.url}
-                  className="text-white text-sm lg:text-base border-b-2 transition-all duration-300 pb-1 border-transparent hover:border-white"
+                  className="text-white text-xs lg:text-sm  border-b-2 transition-all duration-300 pb-1 border-transparent hover:border-white"
                 >
                   {nav.title}
                 </Link>
@@ -30,16 +29,32 @@ function Footer() {
           </ul>
         </div>
 
-        {/* Services Section */}
-        <div className="lg:col-span-2 lg:-ml-8 my-4">
-          <h3 className="text-xl font-semibold mb-5">Our Services</h3>
+        {/* Helpful Links Section */}
+        <div className="lg:col-span-2 lg:-ml-2 my-4">
+          <h3 className="text-xl font-semibold mb-5">Support</h3>
           <ul className="space-y-3">
-            {FooterData.Services.map((nav, id) => (
+            {FooterData.support.map((nav, id) => (
               <li key={id} className="flex items-center gap-1">
                 <IoIosCheckmarkCircleOutline className="mb-1" />
                 <Link
                   href={nav.url}
-                  className="text-white text-sm lg:text-base border-b-2 transition-all duration-300 pb-1 border-transparent hover:border-white"
+                  className="text-white text-xs lg:text-sm  border-b-2 transition-all duration-300 pb-1 border-transparent hover:border-white"
+                >
+                  {nav.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="lg:col-span-2 lg:ml-2  my-4">
+          <h3 className="text-xl font-semibold mb-5">Order Now</h3>
+          <ul className="space-y-3">
+            {FooterData.helpLink.map((nav, id) => (
+              <li key={id} className="flex items-center gap-1">
+                <IoIosCheckmarkCircleOutline className="mb-1" />
+                <Link
+                  href={nav.url}
+                  className="text-white text-xs lg:text-sm  border-b-2 transition-all duration-300 pb-1 border-transparent hover:border-white"
                 >
                   {nav.title}
                 </Link>
@@ -49,15 +64,15 @@ function Footer() {
         </div>
 
         {/* Legal Section */}
-        <div className="text-left col-span-2 lg:-ml-8 my-4">
+        <div className="text-left lg:col-span-2 -ml-5 md:ml-0 lg:-ml-8 my-4">
           <h3 className="text-xl font-semibold mb-5">Address</h3>
           <ul className="space-y-3">
             {FooterData.Address.map((nav, id) => (
               <li className="flex items-center gap-2" key={id}>
-                <nav.icon className="w-5 h-5" />
+                <nav.icon className="w-5 min-w-5 min-h-5 h-5" />
                 <Link
                   href={nav.url}
-                  className="text-white text-sm lg:text-base text-wrap border-b-2 transition-all duration-300 pb-1 border-transparent hover:border-white"
+                  className="text-white text-xs lg:text-sm text-wrap border-b-2 transition-all duration-300 pb-1 border-transparent hover:border-white"
                 >
                   {nav.title}
                 </Link>

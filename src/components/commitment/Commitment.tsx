@@ -15,7 +15,7 @@ export default function Commitment() {
             <div>
               <commitment.icon className="w-10 h-10" />
             </div>
-            <h2 className="text-xl font-semibold text-primary-2 mt-4">
+            <h2 className="text-base lg:text-xl font-semibold text-primary-2 mt-4">
               {commitment.title === "Experiences" ? (
                 <Experiences value={commitment.value} />
               ) : commitment.title === "Reviews" ? (
@@ -24,7 +24,9 @@ export default function Commitment() {
                 <Count value={commitment.value} />
               )}
             </h2>
-            <h2 className="text-2xl font-bold">{commitment.title}</h2>
+            <h2 className="text-xl lg:text-2xl font-bold">
+              {commitment.title}
+            </h2>
           </div>
         ))}
       </div>

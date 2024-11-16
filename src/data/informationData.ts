@@ -220,6 +220,24 @@ export const FooterData = {
             url: 'https://www.upwork.com/freelancers/~01c6ab9301d7e9098a'
         },
     ],
+    support: [
+        {
+            title: '100% quality guaranteed ',
+            url: '#'
+        },
+        {
+            title: 'Super fast delivery ',
+            url: '#'
+        },
+        {
+            title: 'Customer satisfactions',
+            url: '#'
+        },
+        {
+            title: '24/7 Support',
+            url: '#'
+        },
+    ],
     Services: [
         {
             title: 'Youtube Video SEO',
@@ -235,10 +253,6 @@ export const FooterData = {
         },
         {
             title: 'Setup Meta Ads',
-            url: '#'
-        },
-        {
-            title: '24/7 Support',
             url: '#'
         },
     ],
