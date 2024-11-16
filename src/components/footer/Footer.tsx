@@ -49,7 +49,7 @@ function Footer() {
         </div>
 
         {/* Legal Section */}
-        <div className=" text-center lg:text-left col-span-2 lg:-ml-8 my-4">
+        <div className="text-left col-span-2 lg:-ml-8 my-4">
           <h3 className="text-xl font-semibold mb-5">Address</h3>
           <ul className="space-y-3">
             {FooterData.Address.map((nav, id) => (
