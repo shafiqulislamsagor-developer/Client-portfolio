@@ -108,14 +108,84 @@ export const InformationData = {
 
 export const ProjectData = [
     {
-        title: 'Social Media Marketer',
+        title: 'Youtube video SEO',
         image: 'https://i.ibb.co.com/NW1fCzp/Screenshot-83.jpg',
-        url: '#'
+        url: 'https://www.fiverr.com/s/qDe2g2p'
     },
     {
-        title: 'Youtube Channel Creation',
-        image: 'https://i.ibb.co.com/NW1fCzp/Screenshot-83.jpg',
-        url: 'https://mimfashion.xyz/'
+        title: 'Youtube video SEO',
+        image: 'https://i.postimg.cc/hGP2cTZP/do-optimize-your-youtube-video-with-SEO.png',
+        url: 'https://www.fiverr.com/s/qDe2g2p'
+    },
+    {
+        title: 'Youtube video SEO',
+        image: 'https://i.postimg.cc/Jz8TY9bX/do-optimize-your-youtube-video-with-SEO-2.jpg',
+        url: 'https://www.fiverr.com/s/qDe2g2p'
+    },
+    {
+        title: 'Youtube video SEO',
+        image: 'https://i.postimg.cc/YCxd5b3s/do-optimize-your-youtube-video-with-SEO-3.jpg',
+        url: 'https://www.fiverr.com/s/qDe2g2p'
+    },
+    {
+        title: 'Youtube video SEO',
+        image: 'https://i.postimg.cc/d1hnTvKb/IMG-20231030-163903.jpg',
+        url: 'https://www.fiverr.com/s/qDe2g2p'
+    },
+    {
+        title: 'Youtube video SEO',
+        image: 'https://i.postimg.cc/26gGQJkV/IMG-20231030-164253.jpg',
+        url: 'https://www.fiverr.com/s/qDe2g2p'
+    },
+    {
+        title: 'Youtube video SEO',
+        image: 'https://i.postimg.cc/yNQvdx2h/New-work.png',
+        url: 'https://www.fiverr.com/s/qDe2g2p'
+    },
+    {
+        title: 'Youtube video SEO',
+        image: 'https://i.postimg.cc/c18XxshY/Screenshot-2.png',
+        url: 'https://www.fiverr.com/s/qDe2g2p'
+    },
+    {
+        title: 'Youtube video SEO',
+        image: 'https://i.postimg.cc/XqF8Q8qx/Screenshot-2-1.png',
+        url: 'https://www.fiverr.com/s/qDe2g2p'
+    },
+    {
+        title: 'Youtube video SEO',
+        image: 'https://i.postimg.cc/PqxQBhNC/Screenshot-3.png',
+        url: 'https://www.fiverr.com/s/qDe2g2p'
+    },
+    {
+        title: 'Youtube video SEO',
+        image: 'https://i.postimg.cc/Lsb3S7ZN/Screenshot-39.jpg',
+        url: 'https://www.fiverr.com/s/qDe2g2p'
+    },
+    {
+        title: 'Youtube video SEO',
+        image: 'https://i.postimg.cc/4xX5Qpgb/Screenshot-5.jpg',
+        url: 'https://www.fiverr.com/s/qDe2g2p'
+    },
+    {
+        title: 'Youtube video SEO',
+        image: 'https://i.postimg.cc/Vk4FG5sy/Screenshot-7.png',
+        url: 'https://www.fiverr.com/s/qDe2g2p'
+    },
+    {
+        title: 'Youtube video SEO',
+        image: 'https://i.postimg.cc/VLqgtD3k/Screenshot-8.png',
+        url: 'https://www.fiverr.com/s/qDe2g2p'
+    },
+    {
+        title: 'Youtube video SEO',
+        image: 'https://i.postimg.cc/LXgB8TtR/You-Tube-SEO-Youtube-Video-SEO-You-Tube-Channel-SEO-3-1.jpg',
+        url: 'https://www.fiverr.com/s/qDe2g2p'
+    },
+    {
+        title: 'Youtube video SEO',
+        image: 'https://i.postimg.cc/j2V6w7cf/You-Tube-SEO-Youtube-Video-SEO-You-Tube-Channel-SEO-5-1.jpg',
+        url: 'https://www.fiverr.com/s/qDe2g2p'
     },
 ]
 
@@ -143,7 +213,7 @@ export const FooterData = {
     helpLink: [
         {
             title: 'Fiverr',
-            url: 'https://www.fiverr.com/mm_mizan?up_rollout=true'
+            url: 'https://www.fiverr.com/mm_mizan?public_mode=true'
         },
         {
             title: 'Up Work',
@@ -153,7 +223,7 @@ export const FooterData = {
     Services: [
         {
             title: 'Youtube Video SEO',
-            url: '#'
+            url: 'https://www.fiverr.com/s/qDe2g2p'
         },
         {
             title: 'Youtube channel optimization',
