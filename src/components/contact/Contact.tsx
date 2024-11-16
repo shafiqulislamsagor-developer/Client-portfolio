@@ -78,8 +78,8 @@ export default function Contact() {
               <input
                 type="tel"
                 name="phone"
-                required
-                placeholder="Phone*"
+                // required
+                placeholder="Phone* (optional)"
                 className="rounded-md col-span-2 border p-3 focus:outline-none"
                 value={formData.phone}
                 onChange={handleChange}

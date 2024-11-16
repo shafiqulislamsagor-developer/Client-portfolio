@@ -13,7 +13,7 @@ function Footer() {
         </div>
 
         {/* Helpful Links Section */}
-        <div className="col-span-2  m-4">
+        <div className="col-span-2 ml-14  my-4">
           <h3 className="text-lg font-semibold mb-2">Order Now</h3>
           <ul className="space-y-2">
             {FooterData.helpLink.map((nav, id) => (

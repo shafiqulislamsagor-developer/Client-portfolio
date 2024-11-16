@@ -17,7 +17,7 @@ import { GiStarsStack } from "react-icons/gi";
 export const social = [
     {
         name: "Facebook",
-        url: "https://www.facebook.com/dmmizanur05",
+        url: "https://www.facebook.com/dmmizanur06",
         icons: Facebook
     },
     {
@@ -235,6 +235,10 @@ export const FooterData = {
         },
         {
             title: 'Setup Meta Ads',
+            url: '#'
+        },
+        {
+            title: '24/7 Support',
             url: '#'
         },
     ],
