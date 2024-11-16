@@ -1,6 +1,6 @@
 import { FooterData, navMenu } from "@/data/informationData";
 import Link from "next/link";
-import { AiOutlineMail } from "react-icons/ai";
+import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 
 function Footer() {
   return (
@@ -17,7 +17,8 @@ function Footer() {
           <h3 className="text-xl font-semibold mb-5">Order Now</h3>
           <ul className="space-y-3">
             {FooterData.helpLink.map((nav, id) => (
-              <li key={id}>
+              <li key={id} className="flex items-center gap-1">
+                <IoIosCheckmarkCircleOutline className="mb-1" />
                 <Link
                   href={nav.url}
                   className="text-white text-sm lg:text-base border-b-2 transition-all duration-300 pb-1 border-transparent hover:border-white"
@@ -30,11 +31,12 @@ function Footer() {
         </div>
 
         {/* Services Section */}
-        <div className="lg:col-span-2 lg:-ml-5 my-4">
+        <div className="lg:col-span-2 lg:-ml-8 my-4">
           <h3 className="text-xl font-semibold mb-5">Our Services</h3>
           <ul className="space-y-3">
             {FooterData.Services.map((nav, id) => (
-              <li key={id}>
+              <li key={id} className="flex items-center gap-1">
+                <IoIosCheckmarkCircleOutline className="mb-1" />
                 <Link
                   href={nav.url}
                   className="text-white text-sm lg:text-base border-b-2 transition-all duration-300 pb-1 border-transparent hover:border-white"
