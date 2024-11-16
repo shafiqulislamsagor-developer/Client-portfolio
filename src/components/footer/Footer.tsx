@@ -82,7 +82,7 @@ function Footer() {
         </div>
       </div>
 
-      <hr className="border-gray-400 w-[95%] mx-auto my-8" />
+      <hr className="border-gray-400 w-[95%] mx-auto my-7" />
       <div className="text-center">
         <p className="text-xs lg:text-sm text-white">
           &copy; 2024 Freelancer Mizan. All rights reserved.
