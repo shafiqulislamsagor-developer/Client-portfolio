@@ -56,8 +56,6 @@ export default function Contact() {
     sendEmail();
   };
 
-  console.log(loading);
-
   return (
     <div
       id="contact"

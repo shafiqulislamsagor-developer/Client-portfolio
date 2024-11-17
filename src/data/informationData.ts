@@ -58,19 +58,23 @@ export const navMenu = [
 export const workMenu = [
     {
         name: 'Youtube SEO',
-        animation: SEO
+        animation: SEO,
+        plane: true
     },
     {
         name: 'Optimization',
-        animation: youtube
+        animation: youtube,
+        plane: true
     },
     {
         name: 'Meta Ads',
-        animation: facebook
+        animation: facebook,
+        plane: false
     },
     {
         name: 'Google Ads',
-        animation: google
+        animation: google,
+        plane: false
     },
 ]
 
