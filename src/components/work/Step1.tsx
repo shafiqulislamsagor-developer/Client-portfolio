@@ -21,6 +21,7 @@ import { Button } from "@/components/ui/button";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { Step } from "@/utils/propsType";
 
 const FormSchema = z.object({
   title: z.string().min(2, {
@@ -45,17 +46,7 @@ const FormSchema = z.object({
   }),
 });
 
-export default function Step1({
-  work,
-}: {
-  work: {
-    name: string;
-    animation: any;
-    plane: boolean;
-    price: number;
-    dayIncrementDiscount: number;
-  };
-}) {
+export default function Step1({ work, orderValue, setOrderValue }: Step) {
   const { nextStep } = useWizard();
   const closeDialogRef = useRef<HTMLButtonElement>(null);
 
@@ -70,11 +61,12 @@ export default function Step1({
   });
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
-    console.log({
+    const value = {
       ...data,
       video: Number(data.video),
       price: Number(data.price),
-    });
+    };
+    setOrderValue({ ...orderValue, ...value });
     closeDialogRef.current?.click();
   }
 

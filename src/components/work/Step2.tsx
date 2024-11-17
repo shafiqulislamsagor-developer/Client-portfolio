@@ -25,9 +25,10 @@ import { Checkbox } from "../ui/checkbox";
 import { FAQData, InformationData } from "@/data/informationData";
 import { DialogClose } from "../ui/dialog";
 import toast from "react-hot-toast";
+import { Step } from "@/utils/propsType";
 
 const FormSchema = z.object({
-  video: z.string().min(2, {
+  videoLink: z.string().min(2, {
     message: "video is required.",
   }),
   agree: z.boolean().refine((val) => val === true, {
@@ -35,32 +36,19 @@ const FormSchema = z.object({
   }),
 });
 
-export default function Step2({
-  work,
-}: {
-  work: {
-    name: string;
-    animation: any;
-    plane: boolean;
-    price: number;
-    dayIncrementDiscount: number;
-  };
-}) {
-  const { previousStep } = useWizard();
+export default function Step2({ work, orderValue, setOrderValue }: Step) {
   const closeDialogRef = useRef<HTMLButtonElement>(null);
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
-      video: "",
+      videoLink: "",
       agree: false,
     },
   });
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
-    console.log({
-      ...data,
-    });
+    setOrderValue({ ...orderValue, ...data });
     toast.success("Order completed successfully");
     closeDialogRef.current?.click();
   }
@@ -72,7 +60,7 @@ export default function Step2({
           {/* video Field */}
           <FormField
             control={form.control}
-            name="video"
+            name="videoLink"
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Video Link</FormLabel>

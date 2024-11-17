@@ -3,11 +3,14 @@
 import Lottie from "lottie-react";
 import React, { useEffect, useState } from "react";
 import { PlanFrom } from "./PlanFrom";
+import Link from "next/link";
 
 interface WorkItem {
   name: string;
   animation: any;
   plane: boolean;
+  price: number;
+  dayIncrementDiscount: number;
 }
 
 export default function Work() {
@@ -54,9 +57,12 @@ export default function Work() {
               key={id}
               className={`bg-white border-b-8 z-20 shadow-xl relative hover:scale-105 duration-300 min-h-60 lg:min-h-72 rounded-sm px-4 gap-5 border-primary-2 cursor-help flex flex-col items-center justify-center`}
             >
-              <div className="absolute top-0 z-20 right-0 bg-primary-2 text-white text-xs md:text-sm px-2 h-7 flex flex-col items-center justify-center rounded-se-sm rounded-bl-lg rounded-t-none">
+              <Link
+                href={"#contact"}
+                className="absolute top-0 z-20 right-0 bg-primary-2 text-white text-xs md:text-sm px-2 h-7 flex flex-col items-center justify-center rounded-se-sm rounded-bl-lg rounded-t-none"
+              >
                 Contact Me
-              </div>
+              </Link>
               <div className="flex flex-col justify-between space-y-2">
                 <Lottie
                   className={`mx-auto ${

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Dialog,
   DialogClose,
@@ -26,6 +26,26 @@ export function PlanFrom({
     dayIncrementDiscount: number;
   };
 }) {
+  const [orderValue, setOrderValue] = useState({
+    title: "",
+    product: 0,
+    price: 0,
+    days: "",
+    videoLink: "",
+    agree: false,
+  });
+
+  if (orderValue.agree) {
+    console.log(orderValue);
+    setOrderValue({
+      title: "",
+      product: 0,
+      price: 0,
+      days: "",
+      videoLink: "",
+      agree: false,
+    });
+  }
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -57,8 +77,16 @@ export function PlanFrom({
         </DialogHeader>
         <ScrollArea className="max-h-[60vh]">
           <Wizard>
-            <Step1 work={work} />
-            <Step2 work={work} />
+            <Step1
+              work={work}
+              orderValue={orderValue}
+              setOrderValue={setOrderValue}
+            />
+            <Step2
+              work={work}
+              orderValue={orderValue}
+              setOrderValue={setOrderValue}
+            />
           </Wizard>
         </ScrollArea>
         <DialogFooter>
