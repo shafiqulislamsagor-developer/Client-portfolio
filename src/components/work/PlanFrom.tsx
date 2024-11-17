@@ -58,7 +58,7 @@ export function PlanFrom({
         <ScrollArea className="max-h-[60vh]">
           <Wizard>
             <Step1 work={work} />
-            <Step2 />
+            <Step2 work={work} />
           </Wizard>
         </ScrollArea>
         <DialogFooter>
