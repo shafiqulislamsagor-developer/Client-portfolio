@@ -59,22 +59,30 @@ export const workMenu = [
     {
         name: 'Youtube SEO',
         animation: SEO,
-        plane: true
+        plane: true,
+        price: 20,
+        dayIncrementDiscount: 2
     },
     {
         name: 'Optimization',
         animation: youtube,
-        plane: true
+        plane: true,
+        price: 20,
+        dayIncrementDiscount: 2
     },
     {
         name: 'Meta Ads',
         animation: facebook,
-        plane: false
+        plane: false,
+        price: 0,
+        dayIncrementDiscount: 2
     },
     {
         name: 'Google Ads',
         animation: google,
-        plane: false
+        plane: false,
+        price: 0,
+        dayIncrementDiscount: 2
     },
 ]
 

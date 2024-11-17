@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import React from "react";
 import {
   Dialog,
   DialogClose,
@@ -8,30 +8,12 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import Link from "next/link";
+import { Wizard } from "react-use-wizard";
 import { ScrollArea } from "../ui/scroll-area";
-import React from "react";
 import Lottie from "lottie-react";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
 
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-
-const FormSchema = z.object({
-  username: z.string().min(2, {
-    message: "Username must be at least 2 characters.",
-  }),
-});
+import Step1 from "./Step1";
+import Step2 from "./Step2";
 
 export function PlanFrom({
   work,
@@ -40,19 +22,10 @@ export function PlanFrom({
     name: string;
     animation: any;
     plane: boolean;
+    price: number;
+    dayIncrementDiscount: number;
   };
 }) {
-  const form = useForm<z.infer<typeof FormSchema>>({
-    resolver: zodResolver(FormSchema),
-    defaultValues: {
-      username: "",
-    },
-  });
-
-  function onSubmit(data: z.infer<typeof FormSchema>) {
-    console.log(data);
-  }
-
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -79,44 +52,21 @@ export function PlanFrom({
       <DialogContent className="w-[95%] mx-auto sm:max-w-[700px]">
         <DialogHeader>
           <DialogTitle className="text-sm lg:text-xl">
-            {work.name} Planing From
+            {work.name} Planing Form
           </DialogTitle>
         </DialogHeader>
         <ScrollArea className="max-h-[60vh]">
-          {" "}
-          <div>
-            <Form {...form}>
-              <form
-                onSubmit={form.handleSubmit(onSubmit)}
-                className="w-2/3 space-y-6"
-              >
-                <FormField
-                  control={form.control}
-                  name="username"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Username</FormLabel>
-                      <FormControl>
-                        <Input placeholder="shadcn" {...field} />
-                      </FormControl>
-                      <FormDescription>
-                        This is your public display name.
-                      </FormDescription>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <Button type="submit">Submit</Button>
-              </form>
-            </Form>
-          </div>
+          <Wizard>
+            <Step1 work={work} />
+            <Step2 />
+          </Wizard>
         </ScrollArea>
         <DialogFooter>
-          <Link href={"#"}>
-            <Button className="bg-primary-2 hover:scale-105 hover:bg-primary-2 duration-500 transition-all">
-              <DialogClose className="bg-transparent">Visit Now</DialogClose>
-            </Button>
-          </Link>
+          {/* <DialogClose
+            ref={closeDialogRef} // Attach the ref here
+            type="button"
+            className="hidden"
+          /> */}
         </DialogFooter>
       </DialogContent>
     </Dialog>
