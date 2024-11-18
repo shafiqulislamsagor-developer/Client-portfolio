@@ -94,7 +94,7 @@ export default function Step1({ work, orderValue, setOrderValue }: Step) {
             name="title"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Title</FormLabel>
+                <FormLabel>Plane Title</FormLabel>
                 <FormControl>
                   <Input
                     placeholder="Enter a title"
