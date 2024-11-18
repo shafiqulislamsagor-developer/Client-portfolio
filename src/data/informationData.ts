@@ -58,21 +58,59 @@ export const navMenu = [
 export const workMenu = [
     {
         name: 'Youtube SEO',
-        animation: SEO
+        animation: SEO,
+        plane: true,
+        price: 20,
+        dayIncrementDiscount: 2
     },
     {
         name: 'Optimization',
-        animation: youtube
+        animation: youtube,
+        plane: true,
+        price: 20,
+        dayIncrementDiscount: 2
     },
     {
         name: 'Meta Ads',
-        animation: facebook
+        animation: facebook,
+        plane: false,
+        price: 0,
+        dayIncrementDiscount: 2
     },
     {
         name: 'Google Ads',
-        animation: google
+        animation: google,
+        plane: false,
+        price: 0,
+        dayIncrementDiscount: 2
     },
 ]
+
+
+export const FAQData = [
+    {
+        Q: 'Is it accessible?',
+        A: 'You need YouTube channel permission to do video SEO',
+        workTitle: 'Youtube SEO',
+
+    },
+    {
+        Q: 'Is it accessible?',
+        A: 'You need YouTube channel permission to do video SEO',
+        workTitle: 'Youtube SEO',
+    },
+    {
+        Q: 'Is it accessible?',
+        A: 'You need YouTube channel permission to do video SEO',
+        workTitle: 'Youtube SEO',
+    },
+    {
+        Q: 'Is it accessible?',
+        A: 'You need YouTube channel permission to do video SEO',
+        workTitle: 'Youtube SEO',
+    },
+]
+
 
 export const CommitmentData = [
     {
@@ -103,7 +141,8 @@ export const InformationData = {
     image: 'https://i.ibb.co.com/R39k791/334757777-613210827307396-2182082348209289555-n.jpg',
     jobTitle: 'Social Media Marketer',
     country: 'Bangladesh',
-    Logo: 'Freelancer Mizan'
+    Logo: 'Freelancer Mizan',
+    email: 'mm.mizanur2020@gmail.com'
 }
 
 export const ProjectData = [
@@ -208,6 +247,7 @@ export const SkillsData = [
     },
 ]
 
+
 export const FooterData = {
     description: 'I am Mizanur Rahman, a YouTube video SEO and optimization expert. In the last 5 years I have completed around 300+ projects with great success. I provide tailored solutions with dedication and a unique work style, ensuring client satisfaction.',
     helpLink: [
@@ -257,7 +297,7 @@ export const FooterData = {
         },
     ],
     Address: [{
-        url: '', icon: AiOutlineMail, title: 'mm.mizanur2020@gmail.com'
+        url: '', icon: AiOutlineMail, title: InformationData.email
     }, { url: '', icon: MdOutlinePhone, title: '+8801891892324' }, { url: '', icon: CiLocationOn, title: 'Sherpur, Mymensingh, Bangladesh' }]
 
 }
