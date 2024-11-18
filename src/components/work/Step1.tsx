@@ -1,9 +1,8 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { useWizard } from "react-use-wizard";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -32,7 +31,7 @@ const FormSchema = z.object({
       required_error: "Please enter a video count.",
     })
     .refine((value) => !isNaN(Number(value)) && Number(value) > 0, {
-      message: "video count must be a positive number.",
+      message: "Video count must be a positive number.",
     }),
   price: z
     .string({
@@ -60,6 +59,14 @@ export default function Step1({ work, orderValue, setOrderValue }: Step) {
     },
   });
 
+  const videoCount = Number(form.watch("video")) || 0;
+
+  useEffect(() => {
+    if (videoCount > 5 && form.getValues("days") === "1 days") {
+      form.setValue("days", "7 days"); // Update the value to 7 days
+    }
+  }, [videoCount, form]);
+
   function onSubmit(data: z.infer<typeof FormSchema>) {
     const value = {
       ...data,
@@ -71,15 +78,12 @@ export default function Step1({ work, orderValue, setOrderValue }: Step) {
   }
 
   function calculatePrice() {
-    const days = Number(form.getValues("days").replace(/\D/g, "")) || 1;
     const videoCount = Number(form.getValues("video"));
     const basePrice = work.price;
     const discount = work.dayIncrementDiscount;
 
     const calculatedPrice =
-      days === 1
-        ? basePrice * videoCount
-        : basePrice * videoCount * days - discount * (days - 1);
+      basePrice * videoCount - (videoCount > 5 ? discount * videoCount : 0);
 
     form.setValue("price", calculatedPrice.toString());
   }
@@ -107,7 +111,6 @@ export default function Step1({ work, orderValue, setOrderValue }: Step) {
               </FormItem>
             )}
           />
-
           {/* Video Field */}
           <FormField
             control={form.control}
@@ -132,7 +135,6 @@ export default function Step1({ work, orderValue, setOrderValue }: Step) {
               </FormItem>
             )}
           />
-
           {/* Days Field */}
           <FormField
             control={form.control}
@@ -153,8 +155,10 @@ export default function Step1({ work, orderValue, setOrderValue }: Step) {
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
-                    <SelectItem value="1 days">1 day</SelectItem>
-                    <SelectItem value="3 days">3 days</SelectItem>
+                    <SelectItem value="1 days" disabled={videoCount > 5}>
+                      1 day
+                    </SelectItem>
+                    <SelectItem value="7 days">7 days</SelectItem>
                     <SelectItem value="5 days">5 days</SelectItem>
                   </SelectContent>
                 </Select>
@@ -162,7 +166,6 @@ export default function Step1({ work, orderValue, setOrderValue }: Step) {
               </FormItem>
             )}
           />
-
           {/* Price Field */}
           <FormField
             control={form.control}
@@ -183,7 +186,6 @@ export default function Step1({ work, orderValue, setOrderValue }: Step) {
               </FormItem>
             )}
           />
-
           {/* Submit Button */}
           <div>
             <Button

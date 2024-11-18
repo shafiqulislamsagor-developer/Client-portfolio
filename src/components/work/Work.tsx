@@ -1,7 +1,7 @@
 "use client";
 
 import Lottie from "lottie-react";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { PlanFrom } from "./PlanFrom";
 import Link from "next/link";
 import { workMenu } from "@/data/informationData";
