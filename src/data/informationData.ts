@@ -145,6 +145,21 @@ export const InformationData = {
     email: 'mm.mizanur2020@gmail.com'
 }
 
+export const ProjectCategory = [
+    {
+        title: 'All',
+        buttonName: 'All'
+    },
+    {
+        title: 'Youtube video SEO',
+        buttonName: 'Youtube SEO'
+    },
+    {
+        title: 'Optimization',
+        buttonName: 'Youtube Optimization'
+    },
+]
+
 export const ProjectData = [
     {
         title: 'Youtube video SEO',
