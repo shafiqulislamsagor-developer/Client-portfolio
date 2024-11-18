@@ -159,7 +159,7 @@ export default function Step1({ work, orderValue, setOrderValue }: Step) {
                       1 day
                     </SelectItem>
                     <SelectItem value="7 days">7 days</SelectItem>
-                    <SelectItem value="5 days">5 days</SelectItem>
+                    <SelectItem value="30 days">30 days</SelectItem>
                   </SelectContent>
                 </Select>
                 <FormMessage />

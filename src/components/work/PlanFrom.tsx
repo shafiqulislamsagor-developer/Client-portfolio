@@ -28,10 +28,10 @@ export function PlanFrom({
 }) {
   const [orderValue, setOrderValue] = useState({
     title: "",
-    product: 0,
     price: 0,
+    video: 0,
     days: "",
-    videoLink: "",
+    videoLink: [""],
     agree: false,
   });
 
@@ -39,10 +39,10 @@ export function PlanFrom({
     console.log(orderValue);
     setOrderValue({
       title: "",
-      product: 0,
       price: 0,
+      video: 0,
       days: "",
-      videoLink: "",
+      videoLink: [""],
       agree: false,
     });
   }

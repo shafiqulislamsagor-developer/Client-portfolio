@@ -11,19 +11,19 @@ export interface Step {
     setOrderValue: React.Dispatch<
         React.SetStateAction<{
             title: string;
-            product: number;
             price: number;
             days: string;
-            videoLink: string;
+            videoLink: string[];
             agree: boolean;
+            video: number;
         }>
     >;
     orderValue: {
         title: string;
-        product: number;
         price: number;
         days: string;
-        videoLink: string;
+        videoLink: string[];
         agree: boolean;
-    };
+        video: number;
+    }
 }

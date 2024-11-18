@@ -1,5 +1,4 @@
-import React, { useRef, useState } from "react";
-import { useWizard } from "react-use-wizard";
+import React, { useRef } from "react";
 import {
   Form,
   FormControl,
@@ -9,13 +8,6 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -26,14 +18,20 @@ import { FAQData, InformationData } from "@/data/informationData";
 import { DialogClose } from "../ui/dialog";
 import toast from "react-hot-toast";
 import { Step } from "@/utils/propsType";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "../ui/accordion";
+import { MdEmail } from "react-icons/md";
 
 const FormSchema = z.object({
-  videoLink: z.string().min(2, {
-    message: "video is required.",
-  }),
+  videoLink: z.array(z.string().min(2, { message: "Video is required." })),
   agree: z.boolean().refine((val) => val === true, {
     message: "You must give permission to proceed.",
   }),
+  email: z.string().email({ message: "Please enter a valid email." }),
 });
 
 export default function Step2({ work, orderValue, setOrderValue }: Step) {
@@ -42,39 +40,48 @@ export default function Step2({ work, orderValue, setOrderValue }: Step) {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
-      videoLink: "",
+      videoLink: Array(orderValue.video || 1).fill([]), // Correct default length
       agree: false,
+      email: "",
     },
   });
 
+  // Handle form submission
   function onSubmit(data: z.infer<typeof FormSchema>) {
     setOrderValue({ ...orderValue, ...data });
     toast.success("Order completed successfully");
     closeDialogRef.current?.click();
   }
 
+  // Debugging: Log the current orderValue
+  console.log("Order value", orderValue);
+
   return (
     <div className="max-w-md mx-auto">
       <Form {...form}>
         <form className="space-y-3" onSubmit={form.handleSubmit(onSubmit)}>
-          {/* video Field */}
-          <FormField
-            control={form.control}
-            name="videoLink"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Video Link</FormLabel>
-                <FormControl>
-                  <Input
-                    placeholder="Enter a video link"
-                    className="w-full "
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+          {/* Render Video Fields Dynamically */}
+          {[...Array(orderValue.video || 1)].map((_, index) => (
+            <FormField
+              key={index}
+              control={form.control}
+              name={`videoLink.${index}`} // Corrected array indexing
+              render={({ field }) => (
+                <FormItem>
+                  {index === 0 && <FormLabel>Video Link</FormLabel>}
+                  <FormControl>
+                    <Input
+                      placeholder={`Enter a video link ${index + 1}`}
+                      className="w-full"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          ))}
+
           {/* Agree Field */}
           <FormField
             control={form.control}
@@ -84,7 +91,7 @@ export default function Step2({ work, orderValue, setOrderValue }: Step) {
                 <FormControl>
                   <Checkbox
                     checked={field.value}
-                    onCheckedChange={field.onChange}
+                    onCheckedChange={(checked) => field.onChange(checked)}
                   />
                 </FormControl>
                 <div className="space-y-2 leading-none">
@@ -96,13 +103,34 @@ export default function Step2({ work, orderValue, setOrderValue }: Step) {
                     grant me editor permission to the email address below
                   </FormDescription>
                   <FormLabel>
-                    <h2 className="pt-2"> {InformationData.email}</h2>
+                    <h2 className="pt-2 flex items-center gap-1">
+                      <MdEmail /> {InformationData.email}
+                    </h2>
                   </FormLabel>
                   <FormMessage />
                 </div>
               </FormItem>
             )}
           />
+
+          <FormField
+            control={form.control}
+            name="email"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Your Email</FormLabel>
+                <FormControl>
+                  <Input
+                    placeholder="Enter your email"
+                    className="w-full"
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
           <div className="space-y-2">
             <FormLabel>FAQ</FormLabel>
             <Accordion
@@ -142,7 +170,6 @@ export default function Step2({ work, orderValue, setOrderValue }: Step) {
       </Form>
 
       {/* Hidden Button for Dialog Close */}
-
       <DialogClose ref={closeDialogRef} type="button" className="hidden" />
     </div>
   );
