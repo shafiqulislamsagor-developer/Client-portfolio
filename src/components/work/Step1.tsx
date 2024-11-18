@@ -190,7 +190,7 @@ export default function Step1({ work, orderValue, setOrderValue }: Step) {
           <div>
             <Button
               type="submit"
-              className="bg-primary-2 mt-5 w-[20%] hover:scale-105 hover:bg-primary-2 transition-all duration-500"
+              className="bg-primary-2 mt-5 max-w-36 hover:scale-105 hover:bg-primary-2 transition-all duration-500"
             >
               Next
             </Button>

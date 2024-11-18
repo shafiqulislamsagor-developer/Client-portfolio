@@ -55,7 +55,7 @@ export default function Project() {
             onClick={() => {
               filteredProjects.length !== more ? setMore(more + 4) : setMore(4);
             }}
-            className="bg-primary-2 text-xs lg:text-base hover:scale-105 hover:bg-primary-2 w-full md:w-auto duration-500 transition-all px-5 h-[40px]"
+            className="bg-primary-2 text-xs lg:text-base hover:scale-105 hover:bg-primary-2 w-auto duration-500 transition-all px-5 h-[40px]"
           >
             {filteredProjects.length !== more ? (
               <>

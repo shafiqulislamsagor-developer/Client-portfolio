@@ -1,3 +1,8 @@
+import Binance from "@/animation/Binance";
+import Mastercard from "@/animation/Mastercard";
+import Moneygram from "@/animation/Moneygram";
+import Payoneer from "@/animation/Payoneer";
+import Western from "@/animation/Western";
 import { FooterData, navMenu } from "@/data/informationData";
 import Link from "next/link";
 import { IoIosCheckmarkCircleOutline } from "react-icons/io";
@@ -83,10 +88,14 @@ function Footer() {
       </div>
 
       <hr className="border-gray-400 w-[95%] mx-auto my-7" />
-      <div className="text-center">
+      <div className="flex items-center flex-col-reverse md:flex-row gap-4 justify-between w-[95%] mx-auto">
         <p className="text-xs lg:text-sm text-white">
           &copy; 2024 Freelancer Mizan. All rights reserved.
         </p>
+        <div className="flex items-center flex-wrap gap-2">
+          <Payoneer />
+          <Binance /> <Mastercard />
+        </div>
       </div>
     </footer>
   );
