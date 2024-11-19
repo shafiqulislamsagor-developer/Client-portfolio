@@ -123,6 +123,7 @@ export default function Step1({ work, orderValue, setOrderValue }: Step) {
                     type="number"
                     placeholder="Enter video count"
                     className="w-full"
+                    min={1}
                     {...field}
                     onChange={(e) => {
                       const videoCount = Number(e.target.value) || 0;

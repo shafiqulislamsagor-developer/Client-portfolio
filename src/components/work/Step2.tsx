@@ -25,9 +25,12 @@ import {
   AccordionTrigger,
 } from "../ui/accordion";
 import { MdEmail } from "react-icons/md";
+import emailjs from "@emailjs/browser";
 
 const FormSchema = z.object({
-  videoLink: z.array(z.string().min(2, { message: "Video is required." })),
+  videoLink: z
+    .array(z.string().url({ message: "Enter a valid video URL." }))
+    .min(1, { message: "At least one video link is required." }),
   agree: z.boolean().refine((val) => val === true, {
     message: "You must give permission to proceed.",
   }),
@@ -47,14 +50,40 @@ export default function Step2({ work, orderValue, setOrderValue }: Step) {
   });
 
   // Handle form submission
-  function onSubmit(data: z.infer<typeof FormSchema>) {
-    setOrderValue({ ...orderValue, ...data });
-    toast.success("Order completed successfully");
+  async function onSubmit(data: z.infer<typeof FormSchema>) {
+    const datas = { ...orderValue, ...data };
+    console.log();
+    const sendEmail = async () => {
+      try {
+        const res = await emailjs.send(
+          "service_0px3fkr",
+          "template_1pj17uy",
+          datas,
+          "g1iULjyitIkqq1ffS"
+        );
+        console.log(datas);
+
+        if (res.status === 200) {
+          toast.success("Order sent successfully!");
+          setOrderValue({
+            title: "",
+            price: 0,
+            video: 0,
+            email: "",
+            days: "",
+            videoLink: [""],
+            agree: false,
+          });
+        }
+      } catch (error: any) {
+        toast.error(error?.text || error);
+      }
+    };
+
+    await sendEmail();
+
     closeDialogRef.current?.click();
   }
-
-  // Debugging: Log the current orderValue
-  console.log("Order value", orderValue);
 
   return (
     <div className="max-w-md mx-auto">

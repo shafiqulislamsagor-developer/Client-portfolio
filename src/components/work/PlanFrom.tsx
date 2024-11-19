@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import {
   Dialog,
-  DialogClose,
   DialogContent,
   DialogFooter,
   DialogHeader,
@@ -30,22 +29,12 @@ export function PlanFrom({
     title: "",
     price: 0,
     video: 0,
+    email: "",
     days: "",
     videoLink: [""],
     agree: false,
   });
 
-  if (orderValue.agree) {
-    console.log(orderValue);
-    setOrderValue({
-      title: "",
-      price: 0,
-      video: 0,
-      days: "",
-      videoLink: [""],
-      agree: false,
-    });
-  }
   return (
     <Dialog>
       <DialogTrigger asChild>

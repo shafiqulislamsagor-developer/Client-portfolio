@@ -13,6 +13,7 @@ export interface Step {
             title: string;
             price: number;
             days: string;
+            email: string;
             videoLink: string[];
             agree: boolean;
             video: number;
@@ -22,8 +23,10 @@ export interface Step {
         title: string;
         price: number;
         days: string;
+        email: string;
         videoLink: string[];
         agree: boolean;
         video: number;
-    }
+    };
 }
+
