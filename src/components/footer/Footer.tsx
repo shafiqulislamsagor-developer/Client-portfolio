@@ -1,8 +1,6 @@
 import Binance from "@/animation/Binance";
 import Mastercard from "@/animation/Mastercard";
-import Moneygram from "@/animation/Moneygram";
 import Payoneer from "@/animation/Payoneer";
-import Western from "@/animation/Western";
 import { FooterData, navMenu } from "@/data/informationData";
 import Link from "next/link";
 import { IoIosCheckmarkCircleOutline } from "react-icons/io";

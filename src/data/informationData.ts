@@ -60,15 +60,15 @@ export const workMenu = [
         name: 'Youtube SEO',
         animation: SEO,
         plane: true,
-        price: 20,
-        dayIncrementDiscount: 2
+        price: 7,
+        dayIncrementDiscount: 0
     },
     {
         name: 'Optimization',
         animation: youtube,
         plane: true,
-        price: 20,
-        dayIncrementDiscount: 2
+        price: 7,
+        dayIncrementDiscount: 0
     },
     {
         name: 'Meta Ads',
@@ -89,24 +89,45 @@ export const workMenu = [
 
 export const FAQData = [
     {
-        Q: 'Is it accessible?',
-        A: 'You need YouTube channel permission to do video SEO',
+        Q: 'How long does it take to see results?',
+        A: 'Optimization improvements typically start showing within 1-2 weeks, but it may take longer depending on your video niche and competition.',
+        workTitle: 'Optimization',
+
+    },
+    {
+        Q: 'Will you create or edit my videos?',
+        A: 'My service is focused on Optimization optimization. I will optimize titles, descriptions, and tags to improve your rankings, but I don’t create or edit videos.',
+        workTitle: 'Optimization',
+    },
+    {
+        Q: 'What kind of videos can you optimize?',
+        A: ' I work with all kinds of YouTube videos, including vlogs, tutorials, product reviews, gaming, and more. My Optimization strategies work across all niches.',
+        workTitle: 'Optimization',
+    },
+    {
+        Q: 'Do you use any black-hat Optimization techniques?',
+        A: "Absolutely not! I only use white-hat Optimization techniques that comply with YouTube's guidelines, ensuring your channel remains safe and grows organically.",
+        workTitle: 'Optimization',
+    },
+    {
+        Q: 'How long does it take to see results?',
+        A: 'SEO improvements typically start showing within 1-2 weeks, but it may take longer depending on your video niche and competition.',
         workTitle: 'Youtube SEO',
 
     },
     {
-        Q: 'Is it accessible?',
-        A: 'You need YouTube channel permission to do video SEO',
+        Q: 'Will you create or edit my videos?',
+        A: 'My service is focused on SEO optimization. I will optimize titles, descriptions, and tags to improve your rankings, but I don’t create or edit videos.',
         workTitle: 'Youtube SEO',
     },
     {
-        Q: 'Is it accessible?',
-        A: 'You need YouTube channel permission to do video SEO',
+        Q: 'What kind of videos can you optimize?',
+        A: ' I work with all kinds of YouTube videos, including vlogs, tutorials, product reviews, gaming, and more. My SEO strategies work across all niches.',
         workTitle: 'Youtube SEO',
     },
     {
-        Q: 'Is it accessible?',
-        A: 'You need YouTube channel permission to do video SEO',
+        Q: 'Do you use any black-hat SEO techniques?',
+        A: "Absolutely not! I only use white-hat SEO techniques that comply with YouTube's guidelines, ensuring your channel remains safe and grows organically.",
         workTitle: 'Youtube SEO',
     },
 ]

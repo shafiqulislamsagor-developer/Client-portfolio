@@ -175,11 +175,8 @@ export default function Step2({ work, orderValue, setOrderValue }: Step) {
                       key={id}
                       value={`${id}`}
                     >
-                      <AccordionTrigger>Is it styled?</AccordionTrigger>
-                      <AccordionContent>
-                        Yes. It comes with default styles that matches the other
-                        components&apos; aesthetic.
-                      </AccordionContent>
+                      <AccordionTrigger>{FAQ.Q}</AccordionTrigger>
+                      <AccordionContent>{FAQ.A}</AccordionContent>
                     </AccordionItem>
                   )
               )}
